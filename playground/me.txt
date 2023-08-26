@@ -1,6 +1,0 @@
-{{#user}}
-Name: Chekit
-Skills: Jenkins, Terraform, Ansible, Docker
-Email: chekitsharma06@gmail.com
-{{/user}}
-
