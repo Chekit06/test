@@ -1,12 +1,11 @@
-services:
-  app:
-    entrypoint:
-    - sleep
-    - infinity
-    image: docker/dev-environments-default:stable-1
-    init: true
-    volumes:
-    - type: bind
-      source: /var/run/docker.sock
-      target: /var/run/docker.sock
+version: '3.8'
 
+services:
+  nginx:
+    container_name: my_nginx_container
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx-conf:/etc/nginx/conf.d
+    restart: always
